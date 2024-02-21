@@ -12,4 +12,12 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./assets/images/**/*');
     eleventyConfig.addPassthroughCopy('./assets/fonts/**/*');
 
+    return {
+        dir: {
+            "data": "_data",
+            includes: "_includes",
+            layouts: "_layouts"
+        }
+    };
+
 };

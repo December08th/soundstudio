@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/default.liquid'
+layout: 'default.liquid'
 title: Home page
 info: the info
 ---
