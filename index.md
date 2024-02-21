@@ -1,5 +1,5 @@
 ---
-layout: 'default.liquid'
+layout: 'default.njk'
 title: Home page
 info: the info
 ---

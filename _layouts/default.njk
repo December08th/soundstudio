@@ -7,14 +7,14 @@
 
     <link rel="stylesheet" href="{{- '/assets/css/styles.css' | url -}}">
 </head>
-<body class="bg-slate-500">
+<body class="bg-slate-500 text-center text-white">
 
    
     <main>
 
-        {%- include 'header.liquid' -%}
+        {%- include 'header.njk' -%}
 
-        {{ content }}
+        {{ content | safe }}
         
     </main>
 
