@@ -1,6 +1,7 @@
 ---
-layout: 'layouts/default.njk'
+layout: 'layouts/default.liquid'
 title: Home page
+info: the info
 ---
 ### Hello!
 

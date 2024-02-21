@@ -9,13 +9,14 @@
 </head>
 <body>
 
-    {% include "header.njk" %}
+   
     <main>
 
-        {{ content | safe }}
-    </main>
+        {%- include 'header.html' -%}
 
-    {% include "footer.njk" %}
+        {{ content }}
+        
+    </main>
 
 </body>
 </html>
