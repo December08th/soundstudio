@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
 
-    <link rel="stylesheet" href="{{- '/assets/css/styles.css' | url -}}">
-</head>
-<body class="bg-slate-500 text-center text-white">
+{% include "head.njk" %}
 
-   
+<body class="">
+
+    {% include "header.njk" %}
+
     <main>
 
-        {%- include 'header.njk' -%}
-
         {{ content | safe }}
-        
+
     </main>
+
+   
 
 </body>
 </html>

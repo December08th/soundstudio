@@ -1,16 +1,13 @@
-const markdownIt = require("markdown-it");
-const markdownItRenderer = new markdownIt();
+const yaml = require("js-yaml");
 
 module.exports = function(eleventyConfig) {
-
-    eleventyConfig.addFilter('markdownify', (str) => {
-        return markdownItRenderer.renderInline(str);
-    });
 
     eleventyConfig.addPassthroughCopy('./assets/css/*.css');
     eleventyConfig.addPassthroughCopy('./assets/js/**/*.js');
     eleventyConfig.addPassthroughCopy('./assets/images/**/*');
     eleventyConfig.addPassthroughCopy('./assets/fonts/**/*');
+
+    eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
 
     return {
         dir: {

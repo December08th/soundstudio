@@ -1,7 +1,19 @@
-<header>
-    The header
+<header class="container flex items-center justify-between fixed top-0 left-0 right-0">
 
-    <p>{{ info }}</p>
+    <div class="">
+        {% include "svg/logo.svg" %}
+    </div>
 
-    {{ 'in md' | markdownify }}
+    <nav>
+        <ul class="flex">
+            {% for item in nav.items %}                
+                <li>
+                    <a href="{{ item.url | url }}">
+                        {{ item.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
 </header>

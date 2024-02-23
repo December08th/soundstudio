@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm-run-all -p dev:*",
-    "build": "run-s build:*",
+    "watch:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --watch --postcss",
+    "build:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --postcss --minify",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:tw --parallel watch:*", 
+    "build": "npm-run-all build:*",
     "dev:11ty": "eleventy --serve",
     "dev:css": "tailwindcss -i assets/css/styles.css -o _site/assets/css/styles.css --watch --postcss",
     "build:11ty": "eleventy",
@@ -20,5 +24,8 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "watch": "^1.0.2"
   }
 }
