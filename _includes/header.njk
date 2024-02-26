@@ -1,19 +1,23 @@
-<header class="container flex items-center justify-between fixed top-0 left-0 right-0">
+<div class="h-lvh bg-black bg-no-repeat bg-top bg-cover" style="background-image: url({{ image | url }})">
 
-    <div class="">
-        {% include "svg/logo.svg" %}
-    </div>
+    <header class="container flex items-center justify-between fixed top-0 left-0 right-0">
 
-    <nav>
-        <ul class="flex">
-            {% for item in nav.items %}                
-                <li>
-                    <a class="relative uppercase mx-4 before:absolute before:left-0 before:-bottom-1 before:w-full before:h-[2px] before:bg-black before:transition-transform before:duration-200 before:scale-x-0 hover:before:scale-x-100" href="{{ item.url | url }}">
-                        {{ item.name }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </nav>
+        <div class="">
+            {% include "svg/logo.svg" %}
+        </div>
 
-</header>
+        <nav>
+            <ul class="flex">
+                {% for item in nav.items %}                
+                    <li>
+                        <a class="text-white relative uppercase mx-4 before:absolute before:left-0 before:-bottom-1 before:w-full before:h-[2px] before:bg-black before:transition-transform before:duration-200 before:scale-x-0 hover:before:scale-x-100" href="{{ item.url | url }}" style="text-shadow: 0 0 1px #000">
+                            {{ item.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+    </header>
+
+</div>

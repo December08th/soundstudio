@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "watch:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --watch --postcss",
+    "dev:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --postcss",
     "build:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --postcss --minify",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
-    "start": "npm-run-all build:tw --parallel watch:*", 
+    "start": "npm-run-all dev:tw --parallel watch:*", 
     "build": "npm-run-all build:*",
     "dev:11ty": "eleventy --serve",
     "dev:css": "tailwindcss -i assets/css/styles.css -o _site/assets/css/styles.css --watch --postcss",

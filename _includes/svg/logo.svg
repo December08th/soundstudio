@@ -12,7 +12,7 @@ viewBox="0 0 4500 2200"
     .str0 {stroke:#373535;stroke-width:6.94;stroke-miterlimit:2.61313}
     .fil0 {fill:transparent}
     .fil5 {fill:#D63539;fill-rule:nonzero}
-    .fil4 {fill:black;fill-rule:nonzero}
+    .fil4 {fill:white;fill-rule:nonzero}
     .fil3 {fill:black}
     .fil2 {fill:#002DE3;fill-rule:nonzero}
     .fil1 {fill:#D63539;fill-rule:nonzero}
