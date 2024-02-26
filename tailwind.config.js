@@ -4,6 +4,7 @@ module.exports = {
     './_layouts/**/*.njk',
     './_includes/**/*.njk',
     './_includes/**/*.svg',
+    './assets/js/scripts.js',
   ],
   theme: {
     container: {
