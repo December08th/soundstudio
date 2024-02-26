@@ -19,7 +19,12 @@ module.exports = {
         '2xl': '1200px', 
       },
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'headings': ['"Lato"', 'sans-serif'],
+        'copy': ['"Poppins"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
