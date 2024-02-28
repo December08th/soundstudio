@@ -12,20 +12,20 @@ module.exports = {
       padding: {
         DEFAULT: '2rem'
       },
-      screens: {
-        sm: '640px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1200px',
-        '2xl': '1200px', 
-      },
-      colors: {
-        'blue': '#002de3',
-        'red': '#d63539',
-        'black': '#2c2e35',
-        'copy': '#2c2e35',
-        'white': '#fff',
-      },
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1200px',
+      '2xl': '1200px', 
+    },
+    colors: {
+      'blue': '#002de3',
+      'red': '#d63539',
+      'black': '#2c2e35',
+      'copy': '#2c2e35',
+      'white': '#fff',
     },
     extend: {
       fontFamily: {
@@ -35,5 +35,8 @@ module.exports = {
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: false,
+  }
 }
 

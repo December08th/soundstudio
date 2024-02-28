@@ -11,8 +11,8 @@ function handle_menu_on_scroll(){
         if(scrollPos > 0) {
             the_header.classList.add('bg-white');
             the_nav_items.forEach(el => {
-                el.classList.remove('text-white');
-                el.classList.add('text-black');
+                el.classList.remove('text-white', 'before:bg-white');
+                el.classList.add('text-copy', 'before:bg-copy');
             });
             the_logo_text.forEach(el => {
                 el.style.fill = "black";
@@ -20,8 +20,8 @@ function handle_menu_on_scroll(){
         } else {
             the_header.classList.remove('bg-white');
             the_nav_items.forEach(el => {
-                el.classList.remove('text-black');
-                el.classList.add('text-white');
+                el.classList.remove('text-copy', 'before:bg-copy');
+                el.classList.add('text-white', 'before:bg-white');
             });
             the_logo_text.forEach(el => {
                 el.style.fill = "white";

@@ -4,6 +4,22 @@
 
 @layer components {
 
+    h1, h2, h3, h4, h5, h6 {
+        @apply text-copy font-headings font-light mt-0
+    }
+
+    h2 {
+        @apply text-4xl;
+    }
+
+    ul {
+        @apply list-none p-0 m-0;
+    }
+
+    img {
+        @apply block max-w-full h-auto;
+    }
+
     .vertical {
         background: linear-gradient(to top, #002de3 50%, #d63539 50%);
         -webkit-background-clip: text;
