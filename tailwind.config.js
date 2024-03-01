@@ -26,6 +26,8 @@ module.exports = {
       'black': '#2c2e35',
       'copy': '#2c2e35',
       'white': '#fff',
+      'gray': '#9ca3af',
+      'darkgray': '#6b7280',
     },
     extend: {
       fontFamily: {
