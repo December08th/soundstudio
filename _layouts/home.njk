@@ -1,13 +1,16 @@
 ---
 layout: default
 ---
-<section class="container py-8">
+<section class="container py-8 box-border relative">
     <p class="text-2xl text-copy leading-loose font-extralight">
         Sound Studio is a San Juan Island based recording studio with pickup services from the Ferry or Airport. Overnight stays can be easily arranged.  Established in 2023, our cozy, non-pretentious space is located in the downtown area near shops, galleries,and  restaurants with a backdrop of surrounding mountains  and the awesome natural beauty of the island itself. Complete production services from the start of an idea to the fully mastered finished version can easily be within reach as our experienced team can also provide studio musicians.
     </p>
+
 </section>
 
-<section class="container py-8">
+<img src="{{ '/assets/images/wave.svg' | url }}" class="mx-auto -mt-4" alt="">
+
+<section class="container py-8 box-border">
 
     <span id="services"></span>
     <h2 class="text-center">
@@ -20,7 +23,7 @@ layout: default
 
 </section>
 
-<section class="container py-8">
+<section class="container py-8 box-border">
 
     <img class="mb-8" src="{{ '/assets/images/control-room.jpg' | url }}" alt="Control Room">
 
@@ -61,5 +64,69 @@ layout: default
             $60-$75  PER SONG
         </li>
     </ul>
+
+</section>
+
+<img src="{{ '/assets/images/wave.svg' | url }}" class="mx-auto -mt-4" alt="">
+
+<section class="container py-8 box-border">
+
+    <h2 class="text-center">
+        Contact Us
+    </h2>
+
+    <div class="mx-auto max-w-2xl">
+        <form action="">
+            <div class="">
+                <label for="name" class="block leading-normal text-copy">
+                    Name:
+                </label>
+
+                <div class="mt-2">
+                    <input type="text" id="name" name="name" class="block box-border w-full text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
+                </div>
+            </div>
+            <div class="mt-6">
+                <label for="email" class="block leading-normal text-copy">
+                    E-mail:
+                </label>
+
+                <div class="mt-2">
+                    <input type="email" id="email" name="email" class="block box-border w-full text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
+                </div>
+            </div>
+            <div class="mt-6">
+                <label for="phone" class="block leading-normal text-copy">
+                    Phone number:
+                </label>
+
+                <div class="mt-2">
+                    <input type="text" id="phone" name="phone" class="block box-border box w-full text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
+                </div>
+            </div>
+            <div class="mt-6">
+                <label for="subject" class="block leading-normal text-copy">
+                    Subject:
+                </label>
+
+                <div class="mt-2">
+                    <input type="text" id="subject" name="subject" class="block box-border w-full text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
+                </div>
+            </div>
+            <div class="mt-6">
+                <label for="message" class="block leading-normal text-copy">
+                    Subject:
+                </label>
+
+                <div class="mt-2">
+                    <textarea id="message" name="message" rows="3" class="block box-border w-full rounded-md border-0 py-1.5 text-copy text-base leading-normal shadow-sm ring-1 ring-inset ring-gray placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray"></textarea>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <button type="submit" class="block w-full sm:inline-block sm:w-auto border-none cursor-pointer rounded-md bg-blue px-8 py-2 text-base font-semibold text-white shadow-sm hover:bg-blue/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue">Send</button>
+            </div>
+        </form>
+    </div>
 
 </section>

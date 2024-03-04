@@ -6,14 +6,15 @@
   "scripts": {
     "watch:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --watch --postcss",
     "dev:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --postcss",
-    "build:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --postcss --minify",
+    "deploy:tw": "tailwindcss -i assets/css/tailwind.css -o assets/css/styles.css --postcss --minify",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
-    "start": "npm-run-all dev:tw --parallel watch:*", 
+    "start": "npm-run-all dev:tw --parallel watch:*",
+    "deploy": "npm-run-all deploy:*", 
     "build": "npm-run-all build:*",
     "dev:11ty": "eleventy --serve",
     "dev:css": "tailwindcss -i assets/css/styles.css -o _site/assets/css/styles.css --watch --postcss",
-    "build:11ty": "eleventy",
+    "deploy:11ty": "eleventy",
     "build:css": "tailwindcss -i assets/css/styles.css -o _site/assets/css/styles.css --postcss --minify"
   },
   "keywords": [],

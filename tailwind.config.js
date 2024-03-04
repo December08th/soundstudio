@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     screens: {
+      xs: '480px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -26,6 +27,8 @@ module.exports = {
       'black': '#2c2e35',
       'copy': '#2c2e35',
       'white': '#fff',
+      'gray': '#9ca3af',
+      'darkgray': '#6b7280',
     },
     extend: {
       fontFamily: {
