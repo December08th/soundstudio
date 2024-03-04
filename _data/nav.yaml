@@ -8,3 +8,6 @@ items:
   - name: Who we are
     url: '#about'
     id: about
+  - name: contact
+    url: '#contact'
+    id: contact
