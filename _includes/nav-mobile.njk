@@ -1,5 +1,5 @@
-<nav class="">
-    <ul id="nav-items" class="hidden lg:flex flex-col lg:flex-row lg:flex-wrap lg:justify-center">
+<nav id="nav" class="hidden">
+    <ul id="" class="lg:flex flex-col lg:flex-row lg:flex-wrap lg:justify-center">
         {% for item in nav.items %}                
             <li>
                 <a class="text-copy lg:text-white relative uppercase mx-4 no-underline before:content-[''] before:absolute before:left-0 before:-bottom-1 before:w-full before:h-[2px] before:bg-white before:transition-transform before:duration-200 before:scale-x-0 hover:before:scale-x-100" href="{{ item.url | url }}">

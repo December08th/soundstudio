@@ -7,7 +7,7 @@ function handle_menu_on_scroll(){
     const the_logo = document.getElementById('logo-svg');
     const the_logo_text = the_logo.querySelectorAll('.fil4');
 
-    function doSomething(scrollPos) {
+    function handle_scroll(scrollPos) {
         if(scrollPos > 0) {
             the_header.classList.add('bg-white', 'shadow-lg', 'shadow-darkgray');
             the_nav_items.forEach(el => {
@@ -34,7 +34,7 @@ function handle_menu_on_scroll(){
 
     if (!ticking) {
         window.requestAnimationFrame(() => {
-            doSomething(lastKnownScrollPosition);
+            handle_scroll(lastKnownScrollPosition);
             ticking = false;
         });
 
@@ -45,3 +45,11 @@ function handle_menu_on_scroll(){
 }
 
 handle_menu_on_scroll();
+
+const menu_btn = document.getElementById('menu-btn');
+const the_nav = document.getElementById('nav');
+console.log(menu_btn);
+function yo(){
+    the_nav.slideToggle();
+}
+menu_btn.addEventListener('click', yo);
