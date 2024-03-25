@@ -44,12 +44,15 @@ function handle_menu_on_scroll(){
 
 }
 
-handle_menu_on_scroll();
-
-const menu_btn = document.getElementById('menu-btn');
-const the_nav = document.getElementById('nav');
-console.log(menu_btn);
-function yo(){
-    the_nav.slideToggle();
+function handle_mobile_menu() {
+    const menu_btn = document.getElementById('menu-btn');
+    const the_nav = document.getElementById('nav');
+    menu_btn.addEventListener('click', () => {
+        the_nav.slideToggle();
+        menu_btn.classList.toggle('active');
+    });
 }
-menu_btn.addEventListener('click', yo);
+
+handle_menu_on_scroll();
+handle_mobile_menu();
+

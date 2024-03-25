@@ -15,12 +15,15 @@
     </header>
 
     {# Mobile #}
-    <header id="header--mobile" class="lg:hidden bg-white text-copy z-10">
+    <header id="header--mobile" class="lg:hidden bg-white pb-3 text-copy z-10">
 
         <div class="container box-border flex flex-col my-2">
-            <div class="flex justify-between">
+            <div class="flex justify-between items-center">
                 {% include "svg/logo.svg" %}
-                <button id="menu-btn">Toggle</button>
+
+                <button id="menu-btn" class="burger block bg-white w-8 h-8 rounded-none border-0 p-0 cursor-pointer transition-all">
+                    {% include "svg/burger.svg" %}
+                </button>
             </div>
 
             {% include "nav-mobile.njk" %}
