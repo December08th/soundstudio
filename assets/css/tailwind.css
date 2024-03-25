@@ -26,4 +26,23 @@
         -webkit-text-fill-color: transparent;
     }
 
+    .burger rect {
+        transform-origin: center center;
+        transition: all 0.4s;
+        fill: black;
+    }
+
+    .burger.active #line1 {
+        transform: rotate(-135deg) translate(-1px, 5px);
+        fill: black;
+    }
+    .burger.active #line2 {
+        transform: rotate(-135deg) translate(-1px, -3px);
+        fill: black;
+    }
+    .burger.active #line3 {
+        transform: rotate(135deg) translate(1px, -11px);
+        fill: black;
+    }
+
 }

@@ -7,11 +7,11 @@ function handle_menu_on_scroll(){
     const the_logo = document.getElementById('logo-svg');
     const the_logo_text = the_logo.querySelectorAll('.fil4');
 
-    function doSomething(scrollPos) {
+    function handle_scroll(scrollPos) {
         if(scrollPos > 0) {
             the_header.classList.add('bg-white', 'shadow-lg', 'shadow-darkgray');
             the_nav_items.forEach(el => {
-                el.classList.remove('text-white', 'before:bg-white');
+                el.classList.remove('lg:text-white', 'before:bg-white');
                 el.classList.add('text-copy', 'before:bg-copy');
             });
             the_logo_text.forEach(el => {
@@ -21,7 +21,7 @@ function handle_menu_on_scroll(){
             the_header.classList.remove('bg-white', 'shadow-lg', 'shadow-darkgray');
             the_nav_items.forEach(el => {
                 el.classList.remove('text-copy', 'before:bg-copy');
-                el.classList.add('text-white', 'before:bg-white');
+                el.classList.add('lg:text-white', 'before:bg-white');
             });
             the_logo_text.forEach(el => {
                 el.style.fill = "white";
@@ -34,8 +34,8 @@ function handle_menu_on_scroll(){
 
     if (!ticking) {
         window.requestAnimationFrame(() => {
-        doSomething(lastKnownScrollPosition);
-        ticking = false;
+            handle_scroll(lastKnownScrollPosition);
+            ticking = false;
         });
 
         ticking = true;
@@ -44,4 +44,15 @@ function handle_menu_on_scroll(){
 
 }
 
+function handle_mobile_menu() {
+    const menu_btn = document.getElementById('menu-btn');
+    const the_nav = document.getElementById('nav');
+    menu_btn.addEventListener('click', () => {
+        the_nav.slideToggle();
+        menu_btn.classList.toggle('active');
+    });
+}
+
 handle_menu_on_scroll();
+handle_mobile_menu();
+

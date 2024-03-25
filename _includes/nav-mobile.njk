@@ -1,0 +1,11 @@
+<nav id="nav" class="hidden py-4">
+    <ul id="" class="flex flex-col pl-4">
+        {% for item in nav.items %}                
+            <li class="border-dotted border-0 border-b-2 border-black odd:border-b-red even:border-b-blue last:border-b-0">
+                <a class="text-copy relative block py-4 uppercase no-underline before:content-[''] before:absolute before:left-0 before:-bottom-1 before:w-full before:h-[2px] before:bg-white before:transition-transform before:duration-200 before:scale-x-0 hover:before:scale-x-100" href="{{ item.url | url }}">
+                    {{ item.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
