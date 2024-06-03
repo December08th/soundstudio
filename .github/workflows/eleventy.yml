@@ -30,4 +30,4 @@ jobs:
           password: ${{ secrets.SFTP_PW }}
           port: 22
           local-dir: ./_site/
-          server-dir: /home/dh_pkzrw5/soundstudiodxt.com
+          server-dir: /home/dh_pkzrw5/soundstudiodxt.com/
