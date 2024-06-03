@@ -1,0 +1,26 @@
+name: Deploy the website
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Use Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          cache: npm
+          node-version: 20         
+      - name: Install npm packages
+        run: npm install 
+      - name: Build to _site
+        run: npm run deploy
+      - name: Upload via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PW }}
+          port: 22
+          local-dir: ./_site/
+          server-dir: /home/dh_pkzrw5/soundstudiodxt.com
