@@ -22,12 +22,12 @@ jobs:
         run: npm install 
       - name: Build to _site
         run: npm run deploy
-      - name: Upload via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy files
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
+          server: ${{ secrets.SFTP_HOST }}
+          local_path: './_site/*'
+          remote_path: '${{ secrets.DESTINATION_PATH }}'
+          sftp_only: true
           password: ${{ secrets.SFTP_PW }}
-          port: 22
-          local-dir: ./_site/
-          server-dir: /home/dh_pkzrw5/soundstudiodxt.com/
