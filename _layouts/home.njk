@@ -101,14 +101,20 @@ layout: default
     </h2>
 
     <div class="mx-auto max-w-2xl">
-        <form action="">
+        <form method="POST" action="https://fp1.formmail.com/cgi-bin/fm192">
+             <input type="hidden" name="_pid" value="53751">
+            <input type="hidden" name="_fid" value="58RVI0DT"><!-- uses captcha -->
+            <input type="hidden" name="recipient" value="1,2,4">
+            <input type="hidden" name="subject" value="Message From SoundStudio DXT">
+            <input type="hidden" name="redirect" value="https://soundstudiodxt.com/message-received/">
+
             <div class="">
-                <label for="name" class="block leading-normal text-copy">
+                <label for="realname" class="block leading-normal font-copy text-copy">
                     Name:
                 </label>
 
                 <div class="mt-2">
-                    <input type="text" id="name" name="name" class="block box-border w-full text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
+                    <input type="text" id="realname" name="realname" rquired class="block box-border w-full font-copy text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
                 </div>
             </div>
             <div class="mt-6">
@@ -117,7 +123,7 @@ layout: default
                 </label>
 
                 <div class="mt-2">
-                    <input type="email" id="email" name="email" class="block box-border w-full text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
+                    <input type="email" id="email" name="email" required class="block box-border w-full font-copy text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
                 </div>
             </div>
             <div class="mt-6">
@@ -126,30 +132,30 @@ layout: default
                 </label>
 
                 <div class="mt-2">
-                    <input type="text" id="phone" name="phone" class="block box-border box w-full text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
+                    <input type="text" id="phone" name="phone" class="block box-border box w-full font-copy text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
                 </div>
             </div>
             <div class="mt-6">
-                <label for="subject" class="block leading-normal text-copy">
+                <label for="meassage-subject" class="block leading-normal text-copy">
                     Subject:
                 </label>
 
                 <div class="mt-2">
-                    <input type="text" id="subject" name="subject" class="block box-border w-full text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
+                    <input type="text" id="meassage-subject" name="meassage-subject" required class="block box-border w-full font-copy text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray">
                 </div>
             </div>
             <div class="mt-6">
                 <label for="message" class="block leading-normal text-copy">
-                    Subject:
+                    Message:
                 </label>
 
                 <div class="mt-2">
-                    <textarea id="message" name="message" rows="3" class="block box-border w-full rounded-md border-0 py-1.5 text-copy text-base leading-normal shadow-sm ring-1 ring-inset ring-gray placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray"></textarea>
+                    <textarea id="message" name="message" rows="3" class="block box-border font-copy w-full text-base text-copy rounded-md border-0 px-4 py-3 leading-normal shadow-sm ring-1 ring-gray ring-inset placeholder:text-darkgray focus:ring-2 focus:ring-inset focus:ring-gray"></textarea>
                 </div>
             </div>
 
             <div class="mt-8">
-                <button type="submit" class="block w-full sm:inline-block sm:w-auto border-none cursor-pointer rounded-md bg-blue px-8 py-2 text-base font-semibold text-white shadow-sm hover:bg-blue/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue">Send</button>
+                <button type="submit" class="block w-full sm:inline-block sm:w-auto border-none cursor-pointer rounded-md bg-blue px-8 py-2 font-copy text-base font-semibold text-white shadow-sm hover:bg-blue/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue">Send</button>
             </div>
         </form>
     </div>
