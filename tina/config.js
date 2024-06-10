@@ -43,9 +43,31 @@ export default defineConfig({
           {
             type: "rich-text",
             name: "body",
-            label: "Body",
+            label: "Intro",
             isBody: true,
           },
+          {
+            type: "object",
+            name: "services",
+            label: "Services",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Heading",
+              },
+              {
+                type: "string",
+                name: "subtitle",
+                label: "Subheading",
+              },
+              {
+                type: "rich-text",
+                name: "text",
+                label: "Text",
+              },
+            ]
+          }
         ],
       },
     ],

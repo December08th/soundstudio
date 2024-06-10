@@ -2,9 +2,9 @@
 layout: default
 ---
 <section class="container py-8 box-border relative">
-    <p class="text-2xl text-copy leading-loose font-extralight">
-        Sound Studio is a music and sound recording studio located on San Juan Island. We specialize in recording, mixing and mastering all genres with state of the art production services. Sound engineering that reflects our 30 plus years of experience in the business will help you create the recording you are looking for - whether you are a solo artist, singer songwriter, band, acoustic ensemble, audio book author or voice over actor. Complete production services from the start of an idea to the fully mastered finished version are easily within reach, as our team provides artistic support, including professional studio musicians if needed to complete a project. We also offer off site recording sessions and live sound mix engineering for musicians, bands, ensembles, and actors, either on or off San Juan Island. 
-    </p>
+    <div class="text-2xl text-copy leading-loose font-extralight">
+        {{ content | safe }}
+    </div>
 
 </section>
 
@@ -14,14 +14,16 @@ layout: default
 
     <span id="services" class="block invisible h-36 -mt-36"></span>
     <h2 class="text-center">
-        PRODUCTION SERVICES
+        {{ services.title }}
     </h2>
 
-    <center><h3 class="text-2xl mt-10 mb-2">RECORDING - MIXING - MASTERING</h3></center>
+    <h3 class="text-2xl mt-10 mb-2 text-center">
+        {{ services.subtitle }}
+    </h3>
 
-    <p class="text-copy text-xl font-extralight leading-relaxed">
-        We specialize in recording &amp; mixing services for all genres of music. We're well tuned into the recording of audio books and voice overs. Whether you're a solo artist or a complete band we have the equipment to bring all of your recordings to a new audio level! <em>Please reach out via email ( form below ) or voice for a custom quotation. 360-317-3249. </em>
-    </p>
+    <div class="text-copy text-xl font-extralight leading-relaxed">
+        {{ services.text | markdownify | safe }}
+    </div>
  
   
    <img class="my-8" src="{{ '/assets/images/live-room.jpg' | url }}" alt="Live Room">

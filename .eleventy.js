@@ -1,5 +1,22 @@
 const yaml = require("js-yaml");
 
+let markdownIt = require("markdown-it");
+let markdownItOptions = {
+    html: true,
+    breaks: true,
+    linkify: true,
+};
+
+let mila = require("markdown-it-attrs");
+let milaOptions = {
+  attrs: {
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }
+};
+
+let md = markdownIt(markdownItOptions).use(mila);
+
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy('./assets/css/*.css');
@@ -11,6 +28,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('.site.webmanifest');
     
     eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+
+    eleventyConfig.setLibrary('md', md);
+
+    eleventyConfig.addFilter('markdownify', str => md.render(str));
 
     return {
         dir: {
