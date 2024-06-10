@@ -1,6 +1,7 @@
 ---
 layout: 'page.njk'
 title: Message Received
+permalink: '/message-received/'
 ---
 <div class="text-center mt-16">
 

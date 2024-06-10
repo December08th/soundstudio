@@ -2,4 +2,5 @@
 layout: 'home.njk'
 title: Sound studio
 image: /assets/images/control-room.jpg
+permalink: '/'
 ---
