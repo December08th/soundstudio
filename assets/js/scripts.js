@@ -19,13 +19,15 @@ function handle_menu_on_scroll(){
             });
         } else {
             the_header.classList.remove('bg-white', 'shadow-lg', 'shadow-darkgray');
-            the_nav_items.forEach(el => {
-                el.classList.remove('text-copy', 'before:bg-copy');
-                el.classList.add('lg:text-white', 'before:bg-white');
-            });
-            the_logo_text.forEach(el => {
-                el.style.fill = "white";
-            });
+            if(the_header.classList.contains('header--home')) {
+                the_nav_items.forEach(el => {
+                    el.classList.remove('text-copy', 'before:bg-copy');
+                    el.classList.add('lg:text-white', 'before:bg-white');
+                });
+                the_logo_text.forEach(el => {
+                    el.style.fill = "white";
+                });
+            }
         }
     }
 

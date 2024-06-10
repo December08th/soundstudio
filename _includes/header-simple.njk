@@ -1,14 +1,14 @@
 <div class="lg:flex justify-center items-center">
 
     {# Desktop #}
-    <header id="header" class="hidden lg:block fixed top-0 left-0 w-full right-0 transition-colors duration-200 z-10">
+    <header id="header" class="header--simple hidden lg:block fixed top-0 left-0 w-full right-0 transition-colors duration-200 z-10">
 
         <div class="container box-border flex flex-col justify-center sm:flex-row sm:flex-wrap items-center md:justify-between my-2">
-            <div class="">
+            <a href="{{ '/' | url }}" class="">
                 {% include "svg/logo.svg" %}
-            </div>
+            </a>
 
-            {% include "nav.njk" %}
+            {% include "nav-simple.njk" %}
 
         </div>
 
@@ -19,7 +19,9 @@
 
         <div class="container box-border flex flex-col my-2">
             <div class="flex justify-between items-center">
-                {% include "svg/logo.svg" %}
+                <a href="{{ '/' | url }}">
+                    {% include "svg/logo.svg" %}
+                </a>
 
                 <button id="menu-btn" class="burger block bg-white w-8 h-8 rounded-none border-0 p-0 cursor-pointer transition-all">
                     {% include "svg/burger.svg" %}

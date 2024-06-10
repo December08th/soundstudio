@@ -3,11 +3,11 @@ items:
     url: '/'
     id: home
   - name: Production Services
-    url: '#services'
+    url: '/#services'
     id: services
   - name: Who we are
-    url: '#about'
+    url: '/#about'
     id: about
   - name: contact
-    url: '#contact'
+    url: '/#contact'
     id: contact
