@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './_layouts/**/*.njk',
     './_includes/**/*.njk',
+    './*.njk',
     './_includes/**/*.svg',
     './assets/js/scripts.js',
   ],
