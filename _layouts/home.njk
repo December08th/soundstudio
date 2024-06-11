@@ -24,11 +24,9 @@ layout: default
     <div class="text-copy text-xl font-extralight leading-relaxed">
         {{ services.text | markdownify | safe }}
     </div>
- 
   
-   <img class="my-8" src="{{ '/assets/images/live-room.jpg' | url }}" alt="Live Room">
+   <img class="my-8" src="{{ services.image.path | url }}" alt="services.image.alt_text">
  
-
 </section>
 
 
@@ -89,7 +87,6 @@ layout: default
 
         </div>
     </div>
-
 
 </section>
 

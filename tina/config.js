@@ -21,7 +21,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "./assets/images",
       publicFolder: "./",
     },
   },
@@ -65,6 +65,23 @@ export default defineConfig({
                 type: "rich-text",
                 name: "text",
                 label: "Text",
+              },
+              {
+                type: "object",
+                label: "Image",
+                name: "image",
+                fields: [
+                  {
+                    type: "image",
+                    name: "path",
+                    label: "Image path",
+                  },
+                  {
+                    type: "string",
+                    name: "alt_text",
+                    label: "Alt text",
+                  },                  
+                ]
               },
             ]
           }
