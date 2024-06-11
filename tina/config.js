@@ -174,6 +174,29 @@ export default defineConfig({
             ]
           },
         ],
+      },{
+        name: "thank_you_page",
+        label: "Message-received page",
+        path: "content/message-received",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          }
+        },
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Heading",
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Text",
+            isBody: true,
+          },          
+        ]
       },
     ],
   },
