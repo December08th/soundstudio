@@ -32,6 +32,12 @@ export default defineConfig({
         name: "home_page",
         label: "Home page",
         path: "content/home",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          }
+        },
         fields: [
           {
             type: "string",
@@ -84,7 +90,72 @@ export default defineConfig({
                 ]
               },
             ]
-          }
+          },
+          {
+            type: "object",
+            label: "Who we are",
+            name: "we",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Heading",
+              },
+              {
+                type: "object",
+                label: "People",
+                name: "people",
+                list: true,
+                ui: {
+                  itemProps: item => {
+                    return {label: item.name}
+                  },
+                  max: 2,
+                  min: 2,
+                  allowedActions: {
+                    create: false,
+                    delete: false,
+                  }
+                },
+                fields: [
+                  {
+                    type: "string",
+                    name: "name",
+                    label: "Name",
+                  },                  
+                  {
+                    type: "string",
+                    name: "info",
+                    label: "Info",
+                    list: true,
+                  },
+                  {
+                    type: "object",
+                    label: "Contact",
+                    name: "contact",
+                    fields: [
+                      {
+                        type: "string",
+                        name: "title",
+                        label: "Heading",
+                      },
+                      {
+                        type: "string",
+                        name: "details",
+                        label: "Details",
+                        list: true,
+                      },                                       
+                    ]
+                  },
+                  {
+                    type: "image",
+                    label: "Image",
+                    name: "image",
+                  },                
+                ]
+              },
+            ]
+          },
         ],
       },
     ],
