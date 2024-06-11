@@ -21,7 +21,7 @@ jobs:
       - name: Install npm packages
         run: npm install 
       - name: Build to _site
-        run: npm run deploy
+        run: npx tinacms build && npm run deploy
       - name: Deploy files
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
