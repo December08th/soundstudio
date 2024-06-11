@@ -156,6 +156,23 @@ export default defineConfig({
               },
             ]
           },
+          {
+            type: "object",
+            label: "Location info",
+            name: "location",
+            fields: [
+              {
+                type: "string",
+                name: "title",
+                label: "Heading",
+              },
+              {
+                type: "rich-text",
+                name: "text",
+                label: "Text",
+              },                         
+            ]
+          },
         ],
       },
     ],

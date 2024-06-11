@@ -2,7 +2,7 @@
 layout: default
 ---
 <section class="container py-8 box-border relative">
-    <div class="text-2xl text-copy leading-loose font-extralight">
+    <div class="text-2xl text-copy leading-loose font-extralight [&_ul]:list-disc [&_ul]:list-inside [&_ul]:pl-4 [&_ul]:my-4">
         {{ content | safe }}
     </div>
 
@@ -21,7 +21,7 @@ layout: default
         {{ services.subtitle }}
     </h3>
 
-    <div class="text-copy text-xl font-extralight leading-relaxed">
+    <div class="text-copy text-xl font-extralight leading-relaxed [&_ul]:list-disc [&_ul]:list-inside [&_ul]:pl-4 [&_ul]:my-4">
         {{ services.text | markdownify | safe }}
     </div>
   
@@ -145,12 +145,11 @@ layout: default
 
     <span id="location" class="block invisible h-36 -mt-36"></span>
     <h2 class="text-center">
-        LOCATION IN FRIDAY HARBOR
+        {{ location.title }}
     </h2>
 
-    <p class="text-copy text-xl font-extralight leading-relaxed">
-        Sound Studio is located in Friday Harbor, within walking distance of the San Juan ferry. Ferry pick-up and accommodation can be arranged. San Juan Island is a tourist destination known for whale watching and the awesome natural beauty of the island itself. Friday Harbor village shops, galleries, restaurants, and Inns complete this picture perfect destination. <em>Residents of the San Juan Islands - ask us about our Island Artists’ Discount for all your recording and sound engineering needs!</em>
-
-    </p>
+    <div class="text-copy text-xl font-extralight leading-relaxed [&_ul]:list-disc [&_ul]:list-inside [&_ul]:pl-4 [&_ul]:my-4">
+        {{ location.text | markdownify | safe }}
+    </div>
 
 </section>
