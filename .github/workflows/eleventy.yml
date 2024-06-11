@@ -19,9 +19,14 @@ jobs:
           cache-dependency-path: ./package.json
           node-version: 20         
       - name: Install npm packages
-        run: npm install 
+        run: npm install
+      - name: Build Tina CMS
+        env:
+          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+        run: npx tinacms build          
       - name: Build to _site
-        run: npx tinacms build && npm run deploy
+        run: npm run deploy
       - name: Deploy files
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
