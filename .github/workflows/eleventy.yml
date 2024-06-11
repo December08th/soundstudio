@@ -20,6 +20,8 @@ jobs:
           node-version: 20         
       - name: Install npm packages
         run: npm install
+      - name: Update caniuse-lite
+        run: npx --yes update-browserslist-db@latest        
       - name: Build Tina CMS
         env:
           TINA_CLIENT_ID: ${{ secrets.TINA_CLIENT_ID }}
